@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "dev": "dotenvx --quiet run -- nodemon -e js --quiet app.js",
+    "dev:production": "dotenvx --quiet run -- node app.js --production",
+    "pm2:start": "dotenvx --quiet run -- pm2 start ecosystem.config.cjs",
+    "pm2:start:prod": "dotenvx --quiet run -- pm2 start ecosystem.config.cjs --env production",
+    "pm2:stop": "pm2 stop koa-celerity",
+    "pm2:restart": "pm2 restart koa-celerity",
+    "pm2:delete": "pm2 delete koa-celerity",
+    "pm2:logs": "pm2 logs koa-celerity",
+    "pm2:monit": "pm2 monit",
+    "pm2:status": "pm2 status"
+  },
+  "type": "module",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.52.0",
+    "@koa/cors": "^5.0.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "koa": "^3.1.2",
+    "koa-body": "^7.0.1",
+    "koa-helmet": "^9.0.0",
+    "koa-router": "^14.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-connect-history-api-fallback": "^0.1.3",
+    "lowdb": "^7.0.1",
+    "nodemon": "^3.1.14",
+    "pm2": "^6.0.14",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
