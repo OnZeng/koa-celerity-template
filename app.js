@@ -4,10 +4,10 @@ import cors from '@koa/cors';
 import koaHelmet from 'koa-helmet';
 import { historyApiFallback } from 'koa2-connect-history-api-fallback';
 import koaStatic from 'koa-static';
-import prRouter from './src/router/prRouter.js';
-import puRouter from './src/router/puRouter.js';
-import { initLowDB } from './src/extend/lowdb.js';
-import logger from './src/extend/logger.js';
+import prRouter from './app/src/router/prRouter.js';
+import puRouter from './app/src/router/puRouter.js';
+import { initLowDB } from './app/src/extend/lowdb.js';
+import logger from './app/src/extend/logger.js';
 
 logger.info('----------------------启动中----------------------');
 

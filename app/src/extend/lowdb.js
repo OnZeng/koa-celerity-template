@@ -11,12 +11,12 @@ export async function initLowDB() {
     };
     logger.info('正在初始化lowdb数据库');
     try {
-        await access('./data', constants.F_OK);
+        await access('./app/data', constants.F_OK);
     } catch {
-        await mkdir('./data');
+        await mkdir('./app/data');
         logger.info('正在创建lowdb默认数据文件');
     }
-    const defDB = await JSONFilePreset('./data/def.json', [defaultUser]);
+    const defDB = await JSONFilePreset('./app/data/def.json', [defaultUser]);
     await defDB.read();
     await defDB.write();
     logger.info('lowdb数据加载完成');
