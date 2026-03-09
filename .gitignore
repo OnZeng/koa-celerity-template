@@ -1,4 +1,4 @@
 node_modules/
 .env.example
-./app/data/
-./app/logs/
+/app/data/
+/app/logs/
