@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
-const logDir = path.resolve(__dirname, '../logs');
+const logDir = path.resolve(__dirname, '../../logs');
 
 const transportOptions = {
   datePattern: 'YYYY-MM-DD',

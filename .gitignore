@@ -1,4 +1,4 @@
 node_modules/
 .env.example
-src/data
-src/logs/
+data/
+logs/
